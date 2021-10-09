@@ -1,5 +1,5 @@
 const path = require("path");
-
+const cors = require("cors");
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -11,6 +11,12 @@ const app = express();
 
 app.set("view engine", "ejs");
 app.set("views", "views");
+
+const corsOptions = {
+   origin: "https://prove04.herokuapp.com/",
+   optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
@@ -50,7 +56,7 @@ mongoose
             user.save();
          }
       });
-      app.listen(3000);
+      app.listen(5000);
    })
    .catch((err) => {
       console.log(err);
