@@ -111,7 +111,7 @@ form {
 .mobile-nav__item a:active,
 .mobile-nav__item a:hover,
 .mobile-nav__item a.active {
-   background: #00695c;
+   background: #3b79ff;
    color: white;
    border-radius: 3px;
 }
@@ -203,7 +203,7 @@ form {
 
 .btn:hover,
 .btn:active {
-   background-color: #00695c;
+   background-color: #3b79ff;
    color: white;
 }
 
