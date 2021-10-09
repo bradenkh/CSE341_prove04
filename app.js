@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const errorController = require("./controllers/error");
 const User = require("./models/user");
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 
@@ -16,7 +16,7 @@ const corsOptions = {
    origin: "https://<whispering-springs-18429>.herokuapp.com/",
    optionsSuccessStatus: 200,
 };
-app.use(cors(corsOptions));git remote
+app.use(cors(corsOptions));
 
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
