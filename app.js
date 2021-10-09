@@ -12,11 +12,11 @@ const app = express();
 app.set("view engine", "ejs");
 app.set("views", "views");
 
-// const corsOptions = {
-//    origin: "https://<whispering-springs-18429>.herokuapp.com/",
-//    optionsSuccessStatus: 200,
-// };
-// app.use(cors(corsOptions));
+const corsOptions = {
+   origin: "https://<whispering-springs-18429>.herokuapp.com/",
+   optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
