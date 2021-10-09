@@ -3,9 +3,9 @@ const cors = require("cors");
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-
 const errorController = require("./controllers/error");
 const User = require("./models/user");
+const PORT = process.env.PORT || 5000
 
 const app = express();
 
@@ -13,10 +13,10 @@ app.set("view engine", "ejs");
 app.set("views", "views");
 
 const corsOptions = {
-   origin: "https://prove04.herokuapp.com/",
+   origin: "https://<whispering-springs-18429>.herokuapp.com/",
    optionsSuccessStatus: 200,
 };
-app.use(cors(corsOptions));
+app.use(cors(corsOptions));git remote
 
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
@@ -56,7 +56,7 @@ mongoose
             user.save();
          }
       });
-      app.listen(5000);
+      app.listen(PORT);
    })
    .catch((err) => {
       console.log(err);
