@@ -35,14 +35,14 @@ app.use(errorController.get404);
 mongoose
    .connect(
       "mongodb+srv://admin:adminpass1@cluster0.bz7dt.mongodb.net/myFirstDatabase?retryWrites=true",
-      { useNewUrlParser: true }
+      { useNewUrlParser: true, useUnifiedTopology: true }
    )
    .then((result) => {
       User.findOne().then((user) => {
          if (!user) {
             const user = new User({
-               name: "Max",
-               email: "max@test.com",
+               name: "Braden",
+               email: "braden@test.com",
                cart: {
                   items: [],
                },
