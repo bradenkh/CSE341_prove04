@@ -8,11 +8,9 @@ All elements are functioning
 4. Briefly describe any pieces of the assignment that are not yet working correctly.
 none
 5. Briefly describe the "coolest" thing you learned while completing this assignment.
-I had a really hard time figuring out schemas, but they make more sense now.
-I also had a really hard time figuring out how data was being moved from forms to controllers to route
-to the ejs template but I finally grasped the subjecty.
+The cyber security part of CSRF attacks was really interesting as I hadn't thought of it before.
 6. If you could change this assignment to be more effective or helpful, what would you change?
-Nothing
+I hate the CSS part, if we could just be given css files that would be great
 7. Please select the category you feel best describes your assignment:
    4 - Meets requirements
 
