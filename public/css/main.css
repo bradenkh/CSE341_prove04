@@ -5,6 +5,7 @@
 }
 
 body {
+   color:  white;
    padding: 0;
    margin: 0;
    font-family: "Open Sans", sans-serif;
@@ -161,6 +162,7 @@ form {
 
 .card__header,
 .card__content {
+   color: black;
    padding: 1rem;
 }
 

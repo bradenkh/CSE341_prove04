@@ -9,6 +9,7 @@ const User = require("./models/user");
 //used for prove 05
 const csrf = require("csurf");
 const flash = require("connect-flash");
+const session = require('express-session');
 const MongoDBStore = require("connect-mongodb-session")(session);
 
 const PORT = process.env.PORT || 5000;
@@ -17,6 +18,12 @@ const MONGODB_URI =
    "mongodb+srv://admin:adminpass1@cluster0.bz7dt.mongodb.net/myFirstDatabase?retryWrites=true";
 
 const app = express();
+
+const store = new MongoDBStore({
+   uri: MONGODB_URI,
+   collection: 'sessions'
+ });
+ const csrfProtection = csrf();
 
 app.set("view engine", "ejs");
 app.set("views", "views");
@@ -69,9 +76,9 @@ app.use(authRoutes);
 app.use(errorController.get404);
 
 mongoose
-  .connect(MONGODB_URI)
+  .connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => {
-    app.listen(3000);
+    app.listen(PORT);
   })
   .catch(err => {
     console.log(err);
