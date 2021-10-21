@@ -4,25 +4,29 @@
    <nav class="main-header__nav">
       <ul class="main-header__item-list">
          <li class="main-header__item">
-            <a class="<%= path === '/shop' ? 'active' : '' %>" href="/">Shop</a>
+            <a class="<%= path === '/shop' ? 'active' : '' %>" href="/shop"
+               >Shop</a
+            >
          </li>
          <li class="main-header__item">
             <a
                class="<%= path === '/shop/products' ? 'active' : '' %>"
-               href="/products"
+               href="/shop/products"
                >Products</a
             >
          </li>
          <% if (isAuthenticated) { %>
          <li class="main-header__item">
-            <a class="<%= path === '/shop/cart' ? 'active' : '' %>" href="/cart"
+            <a
+               class="<%= path === '/shop/cart' ? 'active' : '' %>"
+               href="/shop/cart"
                >Cart</a
             >
          </li>
          <li class="main-header__item">
             <a
                class="<%= path === '/shop/orders' ? 'active' : '' %>"
-               href="/orders"
+               href="/shop/orders"
                >Orders</a
             >
          </li>
