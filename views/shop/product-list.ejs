@@ -2,10 +2,11 @@
     <link rel="stylesheet" href="/css/product.css">
     </head>
 
-    <body>
+    <body style="background-color: darkgray;">
         <%- include('../includes/navigation.ejs') %>
 
             <main>
+                <div >
                 <% if (prods.length > 0) { %>
                     <div class="grid">
                         <% for (let product of prods) { %>
@@ -38,5 +39,6 @@
                     <% } else { %>
                         <h1>No Products Found!</h1>
                         <% } %>
+                </div>
             </main>
             <%- include('../includes/end.ejs') %>

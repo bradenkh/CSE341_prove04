@@ -13,6 +13,8 @@ const User = require("./models/user");
 
 const PORT = process.env.PORT || 5000;
 
+process.env.PWD = process.cwd();
+
 const MONGODB_URI =
    "mongodb+srv://admin:adminpass1@cluster0.bz7dt.mongodb.net/myFirstDatabase?retryWrites=true";
 
@@ -42,6 +44,8 @@ app.use(
 );
 app.use(csrfProtection);
 app.use(flash());
+
+app.use(express.static(process.env.PWD + "/public"));
 
 app.use((req, res, next) => {
    res.locals.isAuthenticated = req.session.isLoggedIn;
